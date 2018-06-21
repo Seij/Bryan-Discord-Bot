@@ -1,1 +1,1 @@
-worker: C# Program.cs
+worker: node bot.js
