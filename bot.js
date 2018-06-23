@@ -96,7 +96,6 @@ client.on("message", async message => {
     await member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
-
   }
   
   if(command === "ban") {
@@ -136,4 +135,4 @@ client.on("message", async message => {
   }
 });
 
-client.login(process.env.BOT_TOKEN); // where BOT_TOKEN is the token of our bot
+client.login(process.env.BOT_TOKEN); // Where BOT_TOKEN is the token of our bot.
