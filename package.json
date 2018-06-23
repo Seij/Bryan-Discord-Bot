@@ -8,6 +8,8 @@
 
   "main": "bot.js",
 
+  "prefix" : "Bryan!"
+  
   "scripts": {
 
     "start": "node bot.js"
