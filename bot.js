@@ -17,21 +17,22 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   // client.user.setActivity(`Serving ${client.guilds.size} servers`);
- client.user.setActivity(`Serving Lady Diana.`);
+  client.user.setActivity(`Serving Lady Diana.`);
 });
 
-// client.on("guildCreate", guild => {
+client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
-//  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-//  client.user.setActivity(`Serving ${client.guilds.size} servers`);
-//});
+  // console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  client.user.setActivity(`Serving Lady Diana.`);
+// });
 
-// client.on("guildDelete", guild => {
+client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
-//  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-//  client.user.setActivity(`Serving ${client.guilds.size} servers`);
-//}); */
-
+  // console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
+  client.user.setActivity(`Serving Lady Diana.`);
+ });
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
@@ -65,7 +66,7 @@ client.on("message", async message => {
     // To get the "message" itself we join the `args` back into a string with spaces: 
     const sayMessage = args.join(" ");
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{}); 
+    message.delete().catch(O_o=>{});
     // And we get the bot to say the thing: 
     message.channel.send(sayMessage);
   }
